@@ -66,3 +66,5 @@ Contains the step definitions for the Gherkin .feature files. These definitions 
 
 * cypress/cucumber-report.html:
 Generates a detailed report of the test execution, including passed and failed test cases, and other relevant information.
+![image](https://github.com/user-attachments/assets/1ed11802-82b2-4247-9098-d67e108f1831)
+
