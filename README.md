@@ -6,8 +6,6 @@
     git clone https://github.com/sowabdou/cypressFramework.git
     cd <project-directory>
 
-        Install dependencies:
-
     npm install
 
 3.  Running the Tests headed
