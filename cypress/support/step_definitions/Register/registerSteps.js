@@ -41,7 +41,7 @@ When("I click on Continue Button", () => {
 });
 
 Then("I validate logged in as user is displayed", () => {
-  cy.contains("Logged in as").should("be.visible");
+  cy.contains("aaaaaLogged in as").should("be.visible");
 });
 
 When("I click on Delete Account Button", () => {

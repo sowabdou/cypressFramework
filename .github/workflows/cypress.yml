@@ -20,20 +20,12 @@ jobs:
           node-version: "node"
 
       - name: 📦 Install dependencies
-        run: npm ci
-
-      - name: 🚀 Start app in background
-        run: npm run start &
-        env:
-          CI: true
-
-      - name: ⏳ Wait for app to be ready
-        run: npx wait-on https://automationexercise.com/
+        run: npm install
 
       - name: 🧪 Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          browser: chrome # optional, or use 'electron' (default)
+          browser: chrome
 
       - name: 📸 Upload Cypress videos
         if: always()
