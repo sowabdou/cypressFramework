@@ -6,6 +6,7 @@ import {
 } from "@badeball/cypress-cucumber-preprocessor";
 import RegisterDom from "../../DomainPages/RegisterDom";
 import registerPage from "../../Pages/registerPage";
+import SharedMethods from "../../../support/SharedMethods";
 
 When("I navigate to Homepage", () => {
   cy.visit("/");
@@ -25,7 +26,10 @@ Then("I validate the header {string} is displayed", (msg) => {
 
 When("I Enter name and email", () => {
   registerPage.nameInput().should("be.visible").type("aaa");
-  registerPage.emailInput().should("be.visible").type("aaa@testmail.com");
+  registerPage
+    .emailInput()
+    .should("be.visible")
+    .type(SharedMethods.randomString(6) + "@testmail.com");
 });
 
 When("I fill in account information details", () => {
