@@ -1,8 +1,9 @@
 import registerPage from "../Pages/registerPage";
+import SharedMethods from "../../support/SharedMethods";
 class RegisterDom {
   fillAccountInformation() {
     registerPage.genderButton().click();
-    registerPage.passwordInput().type("1233456789");
+    registerPage.passwordInput().type(SharedMethods.randomString(8));
     registerPage.dayDropDown().select("11");
     registerPage.monthDropDown().select("November");
     registerPage.yearDropDown().select("2011");
