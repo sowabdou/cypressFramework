@@ -27,7 +27,7 @@ jobs:
         uses: cypress-io/github-action@v6
 
         with:
-          command: npx cypress run --env TAGS='@UI'
+          command: npx cypress run --env cucumber-tag-filter="@UI"
           browser: chrome
 
       - name: 🖼️ Upload Cypress screenshots
