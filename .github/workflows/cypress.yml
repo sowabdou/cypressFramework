@@ -1,6 +1,7 @@
 name: CI - Cypress Tests
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
@@ -24,7 +25,9 @@ jobs:
 
       - name: 🧪 Run Cypress tests
         uses: cypress-io/github-action@v6
+
         with:
+          command: npx cypress run --env TAGS='@UI'
           browser: chrome
 
       - name: 🖼️ Upload Cypress screenshots
